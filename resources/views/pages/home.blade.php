@@ -6,12 +6,16 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="page-desctiption">
-          <h1>Welcome</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, nesciunt autem ad placeat
-            reprehenderit hic eaque facere, ducimus, accusantium repellendus qui expedita consectetur ipsa! Facere
-            asperiores maiores odit deserunt necessitatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit sed ex nulla hic exercitationem? Placeat odit nesciunt praesentium rem. Deserunt odio
-            veritatis facilis nulla optio voluptatem eum et voluptatum in. </p>
+          <div class="jumbotron mt-10">
+            <h1 class="display-4">Selamat Datang</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex deserunt alias non, dolorum
+              tenetur perferendis est accusantium distinctio, sed nostrum voluptatem, totam ab iure commodi? Nostrum
+              consectetur voluptatem non ducimus!</p>
+            <hr class="my-2">
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Registrasi sekarang!</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
