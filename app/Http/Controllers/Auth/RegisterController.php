@@ -39,9 +39,11 @@ class RegisterController extends Controller
         ]);
 
         // Sign the user in
+        auth()->attempt($request->only('email', 'password'));
+        // dd($request->only('email', 'password')); // berisikan email dan pass
 
         // Redirect to Homepage
+        // return redirect()->route('dashboard');
         return redirect('/');
-
     }
 }
