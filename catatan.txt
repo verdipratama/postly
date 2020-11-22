@@ -1,5 +1,6 @@
-1. php artisan serve (untuk deploy ke localhost)
-2. Artisan Migrations Command
+1. php artisan (check semua command)
+2. php artisan serve (untuk deploy ke localhost)
+3. Artisan Migrations Command
 - Jangan lupa untuk membuat database terlebih dahulu di mysql dan samakan dengan file di env
 - hapus semua file di database/migrations
 - php artisan migrate:reset (mengahapus semua tabel di mysql)
@@ -8,13 +9,26 @@
 - php artisan migrate:rollback (untuk menghapus tabel terakhir dibuat)
 - php artisan migrate (untuk push ke database)
 
-3. Artisan Controller Command
+4. Artisan Controller Command
 - php artisan make:controller DashboardController
 - php artisan make:controller Auth\\RegisterController (Membuat controller di dalam folder)
 
-4. Artisan Model Command
+5. Artisan Model Command
 - php artisan make:model TestModel
 - php artisan make:model Test\\TestModel (Membuat model di dalam folder)
 
 LARAVEL FLOW PRACTICE:
 Membuat Controller -> Routing di web.php -> Konfigurasi Controller -> View
+
+===========================================================
+Blade Template Engine Tutorial:
+
+- @yield = untuk inject content
+- @extends = untuk menampikan @yield
+- @section('content') @endsection = menampilan kontennya
+
+
+1. Membuat Register
+- Konfigurasi routing register di routes/web.php
+- Membuat Controller = php artisan make:controller Auth\\RegisterController
+-

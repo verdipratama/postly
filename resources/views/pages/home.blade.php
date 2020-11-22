@@ -13,7 +13,8 @@
               consectetur voluptatem non ducimus!</p>
             <hr class="my-2">
             <p class="lead">
-              <a class="btn btn-primary btn-lg pjax" href="/register" role="button">Registrasi sekarang!</a>
+              <a class="btn btn-primary btn-lg pjax" href="{{ route('register') }}" role="button">Registrasi
+                sekarang!</a>
             </p>
           </div>
         </div>

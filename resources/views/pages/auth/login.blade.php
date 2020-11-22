@@ -38,7 +38,7 @@
                     <button type="submit">Login</button>
                   </div>
                   <div class="login-form-group not-registered text-center">
-                    <p>Belum Punya Akun?<a class="pjax" href="/register">Daftar Sekarang!!!</a></p>
+                    <p>Belum Punya Akun?<a class="pjax" href="{{ route('register') }}">Daftar Sekarang!!!</a></p>
                   </div>
                 </form>
               </div>
