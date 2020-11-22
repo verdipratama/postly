@@ -17,4 +17,4 @@
 - php artisan make:model Test\\TestModel (Membuat model di dalam folder)
 
 LARAVEL FLOW PRACTICE:
-Membuat Controller -> ROUTING di web.php -> Konfigurasi Controller -> View
+Membuat Controller -> Routing di web.php -> Konfigurasi Controller -> View
