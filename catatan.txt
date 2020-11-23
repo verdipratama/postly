@@ -26,9 +26,10 @@ Blade Template Engine Tutorial:
 - @yield = untuk inject content
 - @extends = untuk menampikan @yield
 - @section('content') @endsection = menampilan kontennya
-
-
-1. Membuat Register
-- Konfigurasi routing register di routes/web.php
-- Membuat Controller = php artisan make:controller Auth\\RegisterController
--
+- @csrf = harus digunakan di setiap form
+- @error / @enderror = menampilkan pesan error
+- Metode {{ asset('value') }} = menampikan asset
+- Metode {{ route('value') }} = untuk routing
+- Metode {{ old('value') }} = untuk menampilan isi data lama pada form
+- @auth / @endauth = untuk menampikan data yang sudah tersimpan di db
+- @guest / @endguest = untuk menampikan yang tidak terdaftar di db

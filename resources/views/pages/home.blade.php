@@ -1,6 +1,10 @@
 @extends('layouts.frontend.app')
 @section('content')
 
+{{-- @php
+    dd(auth()->user())
+@endphp --}}
+
 <div class="main-area pt-50">
   <div class="container">
     <div class="row">

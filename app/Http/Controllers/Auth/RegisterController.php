@@ -29,6 +29,7 @@ class RegisterController extends Controller
             'password'   => 'required|confirmed',
         ]);
 
+        // dd($request->only('email', 'password')); // berisikan email dan pass
         // Store User dari User.php Model
         User::create([
             'first_name' => $request->first_name,
@@ -40,7 +41,6 @@ class RegisterController extends Controller
 
         // Sign the user in
         auth()->attempt($request->only('email', 'password'));
-        // dd($request->only('email', 'password')); // berisikan email dan pass
 
         // Redirect to Homepage
         // return redirect()->route('dashboard');

@@ -10,17 +10,40 @@
           <div class="login-section">
             <div class="login-title">
               <h3>Login</h3>
+
               <div class="login-form">
-                <form action="/login" method="POST">
+
+                {{-- Session Helper jika login tidak berhasil --}}
+                @if (session('status'))
+                <div class="alert-danger">
+                  {{ session('status') }}
+                </div><!-- /.alert-danger -->
+                @endif
+
+                <form action="{{ route('login') }}" method="POST">
+
+                  @csrf
+
                   <h6>Email atau Username</h6>
                   <div class="login-form-gorup">
-                    <input type="text" id="email" class="login-form-control " name="email" value=""
-                      placeholder="Email atau username" required autocomplete="email" autofocus>
+                    <input type="text" id="email" class="login-form-control @error('email') is-invalid @enderror"
+                      name="email" value="" placeholder="Email atau username" required autocomplete="email" autofocus>
+                    @error('username')
+                    <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                   </div>
 
                   <div class="login-form-gorup">
-                    <input type="password" id="password" class="login-form-control " name="password" required
+                    <input type="password" id="password"
+                      class="login-form-control @error('password') is-invalid @enderror" name="password" required
                       autocomplete="current-password" placeholder="Password">
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                   </div>
 
                   <div class="login-form-group">
