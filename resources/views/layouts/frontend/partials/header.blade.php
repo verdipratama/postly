@@ -50,7 +50,7 @@
               <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="profile"
                   src="{{ asset('frontend/img/Sergiu17.jpeg') }}" alt=""></a>
               <div class="dropdown-menu dropdown-menu-right">
-                <a href="/" class="pjax dropdown-item">Verdi Pratama</a>
+                <a href="/" class="pjax dropdown-item">{{ auth()->user()->username }}</a>
                 <a href="/" class="pjax dropdown-item">Edit Profile</a>
                 <a href="/" class="pjax dropdown-item">Settings</a>
 
