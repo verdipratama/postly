@@ -53,9 +53,15 @@
                 <a href="/" class="pjax dropdown-item">Verdi Pratama</a>
                 <a href="/" class="pjax dropdown-item">Edit Profile</a>
                 <a href="/" class="pjax dropdown-item">Settings</a>
+
                 <div class="dropdown-border">
-                  <a href="/" class="dropdown-item">Logout</a>
+                  {{-- Mengamankan logout dari cross site scripting --}}
+                  <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="dropdown-item">Logout</button>
+                  </form>
                 </div>
+
               </div>
             </div>
           </div>
