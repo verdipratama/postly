@@ -58,7 +58,7 @@
                   {{-- Mengamankan logout dari cross site scripting --}}
                   <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <button type="submit" class="dropdown-item">Logout</button>
+                    <button type="submit" class="pjax dropdown-item">Logout</button>
                   </form>
                 </div>
 
