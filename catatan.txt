@@ -33,3 +33,10 @@ Blade Template Engine Tutorial:
 - Metode {{ old('value') }} = untuk menampilan isi data lama pada form
 - @auth / @endauth = untuk menampikan data yang sudah tersimpan di db
 - @guest / @endguest = untuk menampikan yang tidak terdaftar di db
+
+
+Laravel Multi Auth Middleware
+- tambahkan: $table->boolean('is_admin')->nullable(); di migration
+- buka app/Models/User.php : 'is_admin'
+- membuat middleware admin: php artisan make:middleware IsAdmin
+- tambahkan register middleware di app/Http/Kernel.App : 'is_admin' => \App\Http\Middleware\IsAdmin::class,

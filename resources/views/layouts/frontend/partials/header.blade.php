@@ -48,11 +48,17 @@
             </div>
             <div class="profile-seeting">
               <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="profile"
-                  src="{{ asset('frontend/img/Sergiu17.jpeg') }}" alt=""></a>
+                  src="{{ asset('frontend/img/users.png') }}" alt=""></a>
               <div class="dropdown-menu dropdown-menu-right">
                 <a href="/" class="pjax dropdown-item">{{ auth()->user()->username }}</a>
                 <a href="/" class="pjax dropdown-item">Edit Profile</a>
                 <a href="/" class="pjax dropdown-item">Settings</a>
+
+                @if (auth()->user()->is_admin == 1)
+                <div class="dropdown-border">
+                  <a href="{{ route('dashboard') }}" class="pjax dropdown-item">Admin Panel</a>
+                </div>
+                @endif
 
                 <div class="dropdown-border">
                   {{-- Mengamankan logout dari cross site scripting --}}

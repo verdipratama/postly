@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('username');
             $table->string('email');
             $table->string('password');
+            $table->boolean('is_admin')->nullable();
             $table->timestamps();
         });
     }
