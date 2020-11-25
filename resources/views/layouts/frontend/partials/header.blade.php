@@ -98,7 +98,7 @@
               <a class="pjax" href=""><img id="upload_mode" class="upload" src="{{ asset('frontend/img/upload.png') }}"
                   alt=""></a>
             </div>
-            <a href="/login" class="btn login-btn pjax">Login</a>
+            <a href="{{ route('login') }}" class="btn login-btn pjax">Login</a>
           </div>
         </div>
 
