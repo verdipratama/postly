@@ -16,16 +16,29 @@ class LoginController extends Controller
     {
         // Validasi email dan password
         $this->validate($request, [
-            'email'    => 'required|email',
-            'password' => 'required',
+            'email'    => 'required',
+            'password' => 'required|min:6',
         ]);
 
-        // dd('You are Login');
-        // Jika user tidak berhasil login
-        if (!auth()->attempt($request->only('email', 'password'))) {
-            return back()->with('status', 'Ups... email dan password salah!');
-        };
+        // Cara yang lebih simple
+        // if (!auth()->attempt($request->only('email', 'password'))) {
+        //     return back()->with('status', 'Ups... email dan password salah!');
+        // };
 
-        return redirect('/');
+        // return redirect('/');
+
+        // Validasi login dengan menggunakan email atau username
+        $email    = $request->get('email');
+        $password = $request->get('password');
+
+        $login_type = filter_var($email, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+
+        // Jika user berhasil login
+        if (auth()->attempt([$login_type => $email, 'password' => $password])) {
+            return redirect('/');
+        }
+
+        // Jika user tidak berhasil login
+        return back()->with('status', 'Ups... email dan password salah!');
     }
 }
