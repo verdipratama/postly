@@ -1,10 +1,6 @@
 @extends('layouts.frontend.app')
 @section('content')
 
-{{-- @php
-    dd(auth()->user())
-@endphp --}}
-
 <div class="main-area pt-50">
   <div class="container">
     <div class="row">
@@ -17,8 +13,14 @@
               consectetur voluptatem non ducimus!</p>
             <hr class="my-2">
             <p class="lead">
+              @auth
+              <a class="btn btn-primary btn-lg pjax" href="/" role="button">Hello!
+                {{ auth()->user()->first_name }}</a>
+              @endauth
+              @guest
               <a class="btn btn-primary btn-lg pjax" href="{{ route('register') }}" role="button">Registrasi
                 sekarang!</a>
+              @endguest
             </p>
           </div>
         </div>
