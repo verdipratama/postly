@@ -104,7 +104,7 @@ class ProAjaxMiddleware
     {
         $session = $request->session();
 
-        $flash_message['type'] = $session->get("{$this->flash_name}.type");
+        $flash_message['type']    = $session->get("{$this->flash_name}.type");
         $flash_message['message'] = $session->get("{$this->flash_name}.message");
         return $flash_message;
     }
