@@ -95,8 +95,8 @@
         <div class="col-lg-3">
           <div class="header-right-section f-right">
             <div class="upload-btn">
-              <a class="pjax" href=""><img id="upload_mode" class="upload" src="{{ asset('frontend/img/upload.png') }}"
-                  alt=""></a>
+              <a class="pjax" href="{{ route('upload') }}"><img id="upload_mode" class="upload"
+                  src="{{ asset('frontend/img/upload.png') }}" alt=""></a>
             </div>
             <a href="{{ route('login') }}" class="btn login-btn pjax">Login</a>
           </div>
