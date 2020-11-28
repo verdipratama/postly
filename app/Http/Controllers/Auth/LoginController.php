@@ -25,7 +25,7 @@ class LoginController extends Controller
         //     return back()->with('status', 'Ups... email dan password salah!');
         // };
 
-        // return redirect('/');
+        // return redirect()->route('dashboard);
 
         // Validasi login dengan menggunakan email atau username
         $email    = $request->get('email');
