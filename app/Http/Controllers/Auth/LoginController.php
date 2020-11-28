@@ -30,11 +30,12 @@ class LoginController extends Controller
         // Validasi login dengan menggunakan email atau username
         $email    = $request->get('email');
         $password = $request->get('password');
+        $remember = $request->get('remember');
 
         $login_type = filter_var($email, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 
         // Jika user berhasil login
-        if (auth()->attempt([$login_type => $email, 'password' => $password])) {
+        if (auth()->attempt([$login_type => $email, 'password' => $password], $remember)) {
             return redirect('/');
         }
 
