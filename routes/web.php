@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/upload', [UploadController::class, 'index'])
     ->name('upload')
-    ->middleware('auth');
+    ->middleware('guest');
 // ->middleware('guest');
 
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');

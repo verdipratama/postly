@@ -34,9 +34,12 @@ class LoginController extends Controller
 
         $login_type = filter_var($email, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 
-        // Jika user berhasil login
         if (auth()->attempt([$login_type => $email, 'password' => $password], $remember)) {
-            return redirect('/');
+            if (auth()->user()->is_admin == 1) {
+                return redirect()->route('dashboard');
+            } else {
+                return redirect('/');
+            }
         }
 
         // Jika user tidak berhasil login
