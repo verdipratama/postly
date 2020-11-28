@@ -44,6 +44,8 @@
                     </div>
                   </div>
                 </div>
+                <a class="pjax" href="{{ route('upload') }}"><img id="upload_mode" class="upload"
+                    src="{{ asset('frontend/img/upload.png') }}" alt=""></a>
               </div>
             </div>
             <div class="profile-seeting">
