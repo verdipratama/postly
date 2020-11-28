@@ -45,3 +45,10 @@ Laravel Middleware
 - Menggunakan middleware pada halaman upload
 - Hanya user yang sudah terdaftar yang bisa mengakases
 - Bisa menggunakan guest middleware
+
+Cara cepat Membuat Model DATABASE dengan -m dan -f:
+-m "membuat migrasi baru"
+-f "membuat factory untuk model"
+- php artisan make:model Upload --help
+- php artisan make:model Upload -m -f
+- Jika membuat table dengan $table->timestamps(); akan otomatis membuat create at update at
