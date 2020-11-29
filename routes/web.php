@@ -61,8 +61,8 @@ Route::get('/reset', function () {
  */
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])
-        ->name('dashboard')
-        ->middleware('is_admin');
-    Route::get('logout', [DashboardController::class, 'logout'])->name('logout');
-    Route::get('user', [UserController::class, 'index'])->name('user');
+        ->middleware('is_admin')
+        ->name('dashboard');
+    Route::get('/auth/logout', [DashboardController::class, 'logout'])->name('admin.logout');
+    Route::get('/user', [UserController::class, 'index'])->name('admin.user');
 });

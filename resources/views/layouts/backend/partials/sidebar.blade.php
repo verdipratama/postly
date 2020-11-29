@@ -16,7 +16,8 @@
       <li class="nav-item dropdown {{ Request::is('admin/user') ? 'active' : '' }}">
         <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>Pengguna</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link {{ Request::is('admin/user') ? 'active' : '' }}" href="{{ route('user') }}">Manage
+          <li><a class="nav-link {{ Request::is('admin/user') ? 'active' : '' }}"
+              href="{{ route('admin.user') }}">Manage
               Pengguna</a>
           </li>
           <li><a class="nav-link " href="#">Manage Reports</a></li>
@@ -25,7 +26,7 @@
 
       <li class="menu-header">Pages</li>
       <li class="nav-item dropdown ">
-        <a href="{{ route('user') }}" class="nav-link has-dropdown"><i class="far fa-file-alt"></i>
+        <a href="{{ route('admin.user') }}" class="nav-link has-dropdown"><i class="far fa-file-alt"></i>
           <span>Page</span></a>
         <ul class="dropdown-menu">
           <li><a class="nav-link " href="#">Add New Page</a></li>
@@ -33,7 +34,7 @@
         </ul>
       </li>
       <li>
-        <a class="nav-link" href="{{ route('logout') }}">
+        <a class="nav-link" href="{{ route('admin.logout') }}">
           <i class="fas fa-sign-out-alt"></i>
           <span>Logout</span></a></li>
     </ul>
