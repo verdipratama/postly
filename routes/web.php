@@ -18,7 +18,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
  */
-
+Route::get('/', function () {
+    return view('pages.home');
+});
+Route::get('/reset', function () {
+    return view('pages.auth.reset');
+});
+/*
+|--------------------------------------------------------------------------
+| User Routes
+|--------------------------------------------------------------------------
+|
+| All installer routes is here
+|
+|
+ */
 Route::post('/upload', [UploadController::class, 'store']);
 Route::get('/upload', [UploadController::class, 'index'])
     ->name('upload')
@@ -29,23 +43,6 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
-Route::get('/', function () {
-    return view('pages.home');
-});
-Route::get('/reset', function () {
-    return view('pages.auth.reset');
-});
-
-/*
-|--------------------------------------------------------------------------
-| User Routes
-|--------------------------------------------------------------------------
-|
-| All installer routes is here
-|
-|
- */
-
 /*
 |--------------------------------------------------------------------------
 | Admin Routes
@@ -54,7 +51,6 @@ Route::get('/reset', function () {
 | All routes for admin panel
 |
  */
-
 Route::group([
     'prefix'     => 'admin',
     'namespace'  => 'Admin',
