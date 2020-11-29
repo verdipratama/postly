@@ -59,10 +59,12 @@ Route::get('/reset', function () {
 | All routes for admin panel
 |
  */
-Route::prefix('admin')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])
-        ->middleware('is_admin')
-        ->name('dashboard');
+
+Route::group([
+    'prefix'     => 'admin',
+    'namespace'  => 'Admin',
+    'middleware' => ['is_admin', 'auth']], function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/auth/logout', [DashboardController::class, 'logout'])->name('admin.logout');
     Route::get('/user', [UserController::class, 'index'])->name('admin.user');
 });
