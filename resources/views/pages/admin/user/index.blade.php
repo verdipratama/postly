@@ -4,21 +4,21 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>{{ __('Manage Pengguna') }}</h1>
+      <h1>{{ __('Manage User') }}</h1>
       <div class="section-header-breadcrumb">
         <div class="breadcrumb-item active"><a href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a></div>
-        <div class="breadcrumb-item">{{ __('Manage Pengguna') }}</div>
+        <div class="breadcrumb-item">{{ __('Manage User') }}</div>
       </div>
     </div>
 
     <div class="section-body">
-      <h2 class="section-title">{{ __('Manage Pengguna') }}</h2>
+      <h2 class="section-title">{{ __('All Users') }}</h2>
       <p class="section-lead">{{ __('Manage Users Section') }}</p>
       <div class="row">
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>{{ __('Manage Pengguna') }}</h4>
+              <h4>{{ __('Manage User') }}</h4>
               <div class="card-header-form">
                 <form>
                   <div class="input-group">

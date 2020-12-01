@@ -12,31 +12,30 @@
           <span>{{ __('Dashboard') }}</span></a>
       </li>
 
-      <li class="menu-header">user management</li>
+      <li class="menu-header">{{ __('user management') }}</li>
       <li class="nav-item dropdown {{ Request::is('admin/user') ? 'active' : '' }}">
-        <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>Pengguna</span></a>
+        <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>{{ __('User') }}</span></a>
         <ul class="dropdown-menu">
           <li><a class="nav-link {{ Request::is('admin/user') ? 'active' : '' }}"
-              href="{{ route('admin.user') }}">Manage
-              Pengguna</a>
+              href="{{ route('admin.user') }}">{{__('Manage User')}}</a>
           </li>
-          <li><a class="nav-link " href="#">Manage Reports</a></li>
+          <li><a class="nav-link " href="#">{{ __('Manage Report') }}</a></li>
         </ul>
       </li>
 
-      <li class="menu-header">Pages</li>
+      <li class="menu-header">{{ __('Pages') }}</li>
       <li class="nav-item dropdown ">
         <a href="{{ route('admin.user') }}" class="nav-link has-dropdown"><i class="far fa-file-alt"></i>
-          <span>Page</span></a>
+          <span>{{ __('Page') }}</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link " href="#">Add New Page</a></li>
-          <li><a class="nav-link " href="#">Manage Page</a></li>
+          <li><a class="nav-link " href="#">{{ __('Add New Page') }}</a></li>
+          <li><a class="nav-link " href="#">{{ __('Manage Page') }}</a></li>
         </ul>
       </li>
       <li>
         <a class="nav-link" href="{{ route('admin.logout') }}">
           <i class="fas fa-sign-out-alt"></i>
-          <span>Logout</span></a></li>
+          <span>{{ __('Logout') }}</span></a></li>
     </ul>
   </aside>
 </div>
