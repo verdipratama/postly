@@ -35,8 +35,8 @@ Route::get('/reset', function () {
  */
 Route::post('/upload', [UploadController::class, 'store']);
 Route::get('/upload', [UploadController::class, 'index'])
-    ->name('upload')
-    ->middleware('guest');
+    ->name('upload');
+// ->middleware('guest');
 // ->middleware('auth');
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 Route::get('/login', [LoginController::class, 'index'])->name('login');

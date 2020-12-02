@@ -14,11 +14,18 @@ class CreateUploadsTable extends Migration
     public function up()
     {
         Schema::create('uploads', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_upload'); // auto primary id
+
+            // cara pertama
+            // belongtoUser dan user ada banyak post
             // $table->integer('user_id')->unsigned()->index();
+
+            //cara kedua
+            // refrence otomatis user_id di database level
+            // cascade = jika menghapus user, post juga akan terhapus
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->text('caption');
-            $table->timestamps();
+            $table->timestamps(); // otomatis membuat create_at & updated_at
         });
     }
 
