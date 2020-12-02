@@ -29,7 +29,13 @@
     </div>
   </form>
   <ul class="navbar-nav navbar-right">
-    <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+    <li>
+      <a href="/" class="nav-link nav-link-lg nav-link-user">
+        <i class="fas fa-wifi"></i> {{ __('ViewSite') }}
+      </a>
+    </li>
+    <li class="dropdown">
+      <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
         <img alt="image" src="{{ asset('backend/assets/img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
         <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->first_name }}!</div>
       </a>
