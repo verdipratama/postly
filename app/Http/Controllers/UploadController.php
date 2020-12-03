@@ -21,9 +21,16 @@ class UploadController extends Controller
             'caption' => 'required',
         ]);
 
+        if (!auth()->user() == $request->caption) {
+            return back()->with('status', 'Ups.. Anda harus login terlebih dahulu!');
+        } else {
+            $request->user()->uploads()->create($request->only('caption'));
+            return back();
+        }
+
         // Cara inline
-        $request->user()->uploads()->create($request->only('caption'));
-        return back();
+        // $request->user()->uploads()->create($request->only('caption'));
+        // return back();
 
         // Cara pertama
         // Post::create([
