@@ -8,9 +8,9 @@
     <img src="{{ asset('frontend/img/users.png') }}" alt class="ui-w-100 rounded-circle">
     <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
       <h4 class="font-weight-bold my-4">{{ auth()->user()->first_name }}</h4>
-      <div class="text-muted mb-4">
+      <p class="text-muted mb-4 percentence">
         {{ __('a senior UX Developer with five years of industry experience!') }}
-      </div>
+      </p>
     </div>
     @endauth
 
@@ -18,9 +18,9 @@
     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt class="ui-w-100 rounded-circle">
     <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
       <h4 class="font-weight-bold my-4">{{ __('John Doe') }}</h4>
-      <div class="text-muted mb-4">
+      <p class="text-muted mb-4 percentence">
         {{ __('a senior UX Developer with five years of industry experience!') }}
-      </div>
+      </p>
     </div>
     @endguest
   </div>
