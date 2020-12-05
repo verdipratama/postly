@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
             'password'   => Hash::make('123456'),
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'is_admin'   => '1',
+            'is_admin'   => 1,
         ), 1 => array(
             'first_name' => 'John',
             'last_name'  => 'Doe',
@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
             'password'   => Hash::make('123456'),
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'is_admin'   => '',
+            'is_admin'   => 2,
         )));
     }
 }
