@@ -17,7 +17,6 @@
         </div>
       </div>
 
-
       <div class="col-md-4 col-sm-6 col-12">
         <div class="card h-100">
           <img src="images/dieux/Agni.jpg" alt="BeatsX">
