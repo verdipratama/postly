@@ -31,7 +31,7 @@
   <ul class="navbar-nav navbar-right">
     <li>
       <a href="/" class="nav-link nav-link-lg nav-link-user">
-        <i class="fas fa-wifi"></i> {{ __('ViewSite') }}
+        <i class="fas fa-wifi"></i>
       </a>
     </li>
     <li class="dropdown">
