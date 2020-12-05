@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
             'password'   => Hash::make('123456'),
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'is_admin'   => '2',
+            'is_admin'   => '',
         )));
     }
 }
