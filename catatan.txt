@@ -34,7 +34,6 @@ Blade Template Engine Tutorial:
 - @auth / @endauth = untuk menampikan data yang sudah tersimpan di db
 - @guest / @endguest = untuk menampikan yang tidak terdaftar di db
 
-
 Laravel Multi Auth Middleware
 - tambahkan: $table->boolean('is_admin')->nullable(); di migration
 - buka app/Models/User.php : 'is_admin'
