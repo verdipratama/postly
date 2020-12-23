@@ -20,13 +20,6 @@ class LoginController extends Controller
             'password' => 'required|min:6',
         ]);
 
-        // Cara yang lebih simple
-        // if (!auth()->attempt($request->only('email', 'password'))) {
-        //     return back()->with('status', 'Ups... email dan password salah!');
-        // };
-
-        // return redirect()->route('dashboard);
-
         // Validasi login dengan menggunakan email atau username
         $email    = $request->get('email');
         $password = $request->get('password');
@@ -44,5 +37,12 @@ class LoginController extends Controller
 
         // Jika user tidak berhasil login
         return back()->with('status', 'Ups... email dan password salah!');
+
+        // Cara yang lebih simple
+        // if (!auth()->attempt($request->only('email', 'password'))) {
+        //     return back()->with('status', 'Ups... email dan password salah!');
+        // };
+
+        // return redirect()->route('dashboard);
     }
 }
