@@ -51,4 +51,3 @@ Cara cepat Membuat Model DATABASE dengan -m dan -f:
 - php artisan make:model Upload --help
 - php artisan make:model Upload -m -f
 - Jika membuat table dengan $table->timestamps(); akan otomatis membuat create at update at
-- HAHA
