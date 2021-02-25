@@ -6,20 +6,20 @@
        -------------------------------------*/
     var user_url = $('#user_url').val();
     var user_slug = $('#user_slug').val();
-    var page = 1; 
+    var page = 1;
     var scroll_top = 1;
-    $(window).scroll(function() { 
+    $(window).scroll(function() {
         if($(window).scrollTop() == $(document).height() - $(window).height()) {
             var d = scroll_top;
             if(d == 1)
             {
                 if($('*').hasClass('usergrid')){
-                    page++; 
-                    load_more(page); 
+                    page++;
+                    load_more(page);
                 }
             }
         }
-    });  
+    });
 
     /*-----------------------------------
         Data load from database
@@ -39,7 +39,7 @@
             if(data == 'no'){
                 scroll_top = 0;
                 $('.scroll-request').fadeOut();
-                    
+
             }else{
                 $("#results").append(data);
             }
@@ -56,18 +56,18 @@
     $(document).on('pjax:start', function() { page = 1;user_url = $('#user_url').val();scroll_top = 0 });
     $(document).on('pjax:end',   function() { page = 1;user_url = $('#user_url').val();scroll_top = 1  });
     if($.support.pjax){
-        $(window).scroll(function() { 
-            if($(window).scrollTop() + $(window).height() >= $(document).height()) { 
+        $(window).scroll(function() {
+            if($(window).scrollTop() + $(window).height() >= $(document).height()) {
                 var d = scroll_top;
                 if(d == 1)
                 {
                     if($('*').hasClass('usergrid')){
-                        page++; 
-                        load_more(page); 
+                        page++;
+                        load_more(page);
                     }
                 }
             }
-        });  
+        });
     }
 
 })(jQuery);
