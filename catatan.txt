@@ -10,6 +10,7 @@
 - php artisan migrate (untuk push ke database)
 
 4. Artisan Controller Command
+- php artisan make:controller sharkController --resource
 - php artisan make:controller DashboardController
 - php artisan make:controller Auth\\RegisterController (Membuat controller di dalam folder)
 
